@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+	--chat-bg-start: #f8fbff;
+	--chat-bg-mid: #ecf7ff;
+	--chat-bg-end: #eef8f1;
+	--chat-panel-shadow: 0 28px 70px -32px rgba(15, 23, 42, 0.45);
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+	color: #0f172a;
+}
+
+.font-display {
+	font-family: "Space Grotesk", sans-serif;
+}
+
+.chat-page-bg {
+	background:
+		radial-gradient(circle at 11% 14%, rgba(56, 189, 248, 0.2) 0%, rgba(56, 189, 248, 0) 45%),
+		radial-gradient(circle at 88% 12%, rgba(16, 185, 129, 0.16) 0%, rgba(16, 185, 129, 0) 38%),
+		linear-gradient(160deg, var(--chat-bg-start) 0%, var(--chat-bg-mid) 54%, var(--chat-bg-end) 100%);
+}
+
+.chat-panel-shadow {
+	box-shadow: var(--chat-panel-shadow);
+}
+
+.chat-bubble-own {
+	background: linear-gradient(145deg, #d6f4ff 0%, #e0fbec 100%);
+	border: 1px solid #bae6fd;
+	box-shadow: 0 8px 22px -18px rgba(14, 116, 144, 0.75);
+}
+
+.chat-bubble-peer {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	box-shadow: 0 10px 25px -20px rgba(15, 23, 42, 0.7);
+}
+
+@keyframes rise-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-rise-in {
+	animation: rise-in 160ms ease-out;
+}
